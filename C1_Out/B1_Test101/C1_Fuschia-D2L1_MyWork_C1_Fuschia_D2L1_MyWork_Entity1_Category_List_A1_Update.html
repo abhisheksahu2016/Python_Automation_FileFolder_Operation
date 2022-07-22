@@ -1,0 +1,33 @@
+{% extends 'A1_Core_Layout/A1_Base.html' %}
+
+        {% block content %}
+
+        {% if messages %}
+        {% for message in messages %}
+            <div class="alert {% if message.tags %}alert-{{ message.tags }}{% endif %}" role="alert">{{ message }}</div>
+        {% endfor %}
+        {% endif %}
+
+        <form action="#" method="post">
+            {% csrf_token %}            <div>
+                        <input type="text" id="Entity1Category_Name_Unique_ID" name="Entity1Category_Name_Unique_Name" required value="{{C1_Fuschia_D2L1_MyWork_Entity1_Category_List.Entity1Category_Name_Unique}}">
+                        <label for="Entity1Category_Name_Unique_ID">Entity1Category_Name_Unique</label>
+                    </div>            <div>
+                        <input type="text" id="Entity1Category_Name_Unique_ID" name="Entity1Category_Name_Unique_Name" required value="{{C1_Fuschia_D2L1_MyWork_Entity1_Category_List.Entity1Category_Name_Unique}}">
+                        <label for="Entity1Category_Name_Unique_ID">Entity1Category_Name_Unique</label>
+                    </div>             <div>
+                                <input type="hidden" id="Entity1Category_ID_ID" name="Entity1Category_ID_Name" required value="{{C1_Fuschia_D2L1_MyWork_Entity1_Category_List.Entity1Category_ID}}">
+                            </div>            <div>
+                        <input type="text" id="Entity1Category_Name_Unique_ID" name="Entity1Category_Name_Unique_Name" required value="{{C1_Fuschia_D2L1_MyWork_Entity1_Category_List.Entity1Category_Name_Unique}}">
+                        <label for="Entity1Category_Name_Unique_ID">Entity1Category_Name_Unique</label>
+                    </div>            <div>
+                        <input type="text" id="Entity1Category_Name_Unique_ID" name="Entity1Category_Name_Unique_Name" required value="{{C1_Fuschia_D2L1_MyWork_Entity1_Category_List.Entity1Category_Name_Unique}}">
+                        <label for="Entity1Category_Name_Unique_ID">Entity1Category_Name_Unique</label>
+                    </div>    <div>
+                <button name="UpdateNormal_Entity1Category_Name" type="submit">UpdateNormal_Entity1Category</button>
+            </div>
+            <div>
+                <a href="{% url 'App_Normal_Table_Entity1Category' %}">Back</button>
+            </div>            
+        </form>   
+        {% endblock content %}

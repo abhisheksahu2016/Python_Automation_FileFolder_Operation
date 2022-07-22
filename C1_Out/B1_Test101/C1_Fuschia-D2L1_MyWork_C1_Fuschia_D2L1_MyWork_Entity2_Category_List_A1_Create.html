@@ -1,0 +1,33 @@
+{% extends 'A1_Core_Layout/A1_Base.html' %}
+
+                {% block content %}
+
+        {% if messages %}
+        {% for message in messages %}
+            <div class="alert {% if message.tags %}alert-{{ message.tags }}{% endif %}" role="alert">{{ message }}</div>
+        {% endfor %}
+        {% endif %}
+
+        <form action="#" method="post">
+            {% csrf_token %}
+            <table>
+        <tr>
+            <th><label for="Entity2Category_Name_ID">Entity2Category_Name</label></th>
+            <th><input type="DateTime" id="Entity2Category_Name_ID" name="Entity2Category_Name_Name" required value="{{C1_Fuschia_D2L1_MyWork_Entity2_Category_List_Table_Row.Entity2Category_Name}}"></th>  
+        </tr>        <tr>
+            <th><label for="Entity2Category_Name_Unique_ID">Entity2Category_Name_Unique</label></th>
+            <th><input type="DateTime" id="Entity2Category_Name_Unique_ID" name="Entity2Category_Name_Unique_Name" required value="{{C1_Fuschia_D2L1_MyWork_Entity2_Category_List_Table_Row.Entity2Category_Name_Unique}}"></th>  
+        </tr>        <tr>
+            <th><label for="Entity2Category_ID_ID">Entity2Category_ID</label></th>
+            <th><input type="DateTime" id="Entity2Category_ID_ID" name="Entity2Category_ID_Name" required value="{{C1_Fuschia_D2L1_MyWork_Entity2_Category_List_Table_Row.Entity2Category_ID}}"></th>  
+        </tr>        <tr>
+            <th><label for="Record_DateTime_ID">Record_DateTime</label></th>
+            <th><input type="DateTime" id="Record_DateTime_ID" name="Record_DateTime_Name" required value="{{C1_Fuschia_D2L1_MyWork_Entity2_Category_List_Table_Row.Record_DateTime}}"></th>  
+        </tr>        <tr>
+            <th><label for="Upgrade_DateTime_ID">Upgrade_DateTime</label></th>
+            <th><input type="DateTime" id="Upgrade_DateTime_ID" name="Upgrade_DateTime_Name" required value="{{C1_Fuschia_D2L1_MyWork_Entity2_Category_List_Table_Row.Upgrade_DateTime}}"></th>  
+        </tr>"    </table>
+            <button name="CreateNormal_Entity1Category_Name" type="submit">CreateNormal_Entity1Category</button>
+            <a href="{% url 'App_Normal_Table_Entity1Category' %}">Back</button>
+        </form>   
+        {% endblock content %}
